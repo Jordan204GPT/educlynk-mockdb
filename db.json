@@ -1,28 +1,69 @@
 {
-  "eleves": [
+  "students": [
     {
-      "id": "EL2024-001",
-      "nom": "Léa Dupont",
-      "classe": "CM2-A",
-      "notes": {
-        "maths": [14, 16, 15],
-        "francais": [12, 14, 13]
+      "student_id": "EL2024-001",
+      "full_name": "Léa Dupont",
+      "class": "CM2-A",
+      "parent_contact": "+221781234567",
+      "grades": {
+        "maths": [
+          { "date": "2024-03-15", "score": 14, "comment": "Bonne participation" },
+          { "date": "2024-04-02", "score": 16, "comment": "Progrès en géométrie" }
+        ],
+        "francais": [
+          { "date": "2024-03-18", "score": 12, "comment": "Orthographe à améliorer" }
+        ]
       },
-      "absences": ["2024-03-15"]
+      "absences": [
+        { "date": "2024-04-10", "reason": "Maladie", "justified": true }
+      ],
+      "behavior": "A+"
+    },
+    {
+      "student_id": "EL2024-002",
+      "full_name": "Mohamed Diop",
+      "class": "CM2-B",
+      "parent_contact": "+221761234568",
+      "grades": {
+        "maths": [
+          { "date": "2024-03-15", "score": 18, "comment": "Excellent en calcul" }
+        ],
+        "svt": [
+          { "date": "2024-04-05", "score": 15, "comment": "Très bonnes observations" }
+        ]
+      },
+      "absences": [],
+      "behavior": "B"
     }
   ],
-  "enseignants": [
+  "teachers": [
     {
-      "id": "ENS-045",
-      "nom": "Mme Martin",
-      "matiere": "Mathématiques",
-      "classes": ["CM2-A", "6ème-B"]
+      "teacher_id": "ENS-MATHS-01",
+      "name": "Mme Diarra",
+      "subjects": ["maths"],
+      "classes": ["CM2-A", "CM2-B"],
+      "contact": "diarra@educlynk.com",
+      "availability": ["lundi", "mercredi"]
     }
   ],
-  "calendrier": [
+  "classes": [
     {
-      "date": "2024-06-25",
-      "evenement": "Réunion parents-professeurs"
+      "class_id": "CM2-A",
+      "schedule": {
+        "maths": "Lundi 10h-12h",
+        "francais": "Mardi 14h-16h"
+      },
+      "events": [
+        { "date": "2024-06-20", "type": "réunion", "participants": ["parents", "enseignants"] }
+      ]
+    }
+  ],
+  "school_events": [
+    {
+      "event_id": "EVT-001",
+      "title": "Journée Portes Ouvertes",
+      "date": "2024-05-15",
+      "description": "Présentation des projets scolaires"
     }
   ]
 }
